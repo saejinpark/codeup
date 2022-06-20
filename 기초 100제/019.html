@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>출력</h1>
+    <form>
+      <input type="text" />
+    </form>
+    <script>
+      //   "연도.월.일"을 입력받아 "일-월-연도" 순서로 바꿔 출력해보자.
+      //     참고
+      //     y, m, d = input().split('.')
+      //     과 같이 변수들을 순서대로 나열하면 구분기호를 기준으로 잘라 순서대로 저장한다.
+      const h1 = document.querySelector("h1");
+      const form = document.querySelector("form");
+      const input = document.querySelector("input");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let strArr = input.value.split(":");
+        console.log(strArr);
+        h1.innerText = "";
+        h1.innerText += strArr[0];
+        h1.innerText += ":";
+        h1.innerText += strArr[1];
+        h1.innerText += ":";
+        h1.innerText += strArr[2];
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
