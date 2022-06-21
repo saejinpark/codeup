@@ -11,8 +11,7 @@ rl.on("line", (line) => {
   let arr = line.split(" ");
   let a = arr[0];
   let b = arr[1];
-  console.log(a);
-  console.log(b);
+  console.log(b, a);
   rl.close();
 });
 
